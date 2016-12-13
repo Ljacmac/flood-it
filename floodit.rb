@@ -32,11 +32,6 @@ def get_board(width, height)
   end     
 end
 
-# TODO: Implement everything else as described in the
-#       assignment brief.
-  
-
-
 def main_menu(width, height)
   columns = width
   rows = height
@@ -65,38 +60,35 @@ def main_menu(width, height)
 end
     
     
-  require 'console_splash'
-  splash = ConsoleSplash.new()
-  splash = ConsoleSplash.new(30, 78)
-  splash.write_header("Flood It", "Lewis Jackson-Mcketty", "0.1",
-        {:nameFg=>:red, :authorFg=>:green})
-  splash.write_center(-5, "Press Enter to start")
-  splash.write_horizontal_pattern("*", {:fg=>:white, :bg=>:green})
-  splash.write_vertical_pattern("|")
+require 'console_splash'
+splash = ConsoleSplash.new()
+splash = ConsoleSplash.new(30, 78)
+splash.write_header("Flood It", "Lewis Jackson-Mcketty", "0.1",
+  {:nameFg=>:red, :authorFg=>:green})
+splash.write_center(-5, "Press Enter to start")
+splash.write_horizontal_pattern("*", {:fg=>:white, :bg=>:green})
+splash.write_vertical_pattern("|")
   
-  number_games = 0
-  best_score = 0
-  columns = 14
-  rows = 9
+number_games = 0
+best_score = 0
+columns = 14
+rows = 9
   
-  splash.splash
-  puts ""
+splash.splash
+puts ""
+ts ""
+  print "->"  
+input = gets.chomp
+  
+while input != "" do
   puts ""
   print "->"  
   input = gets.chomp
+end
   
-  while input != "" do
-    puts ""
-    print "->"  
-    input = gets.chomp
-  end
-  
-  main_menu(columns, rows)
+main_menu(columns, rows)
 
   
-  
-  puts "Choose your initial colour"
-  print "->"
-  initial = gets.chomp
+
     
       
