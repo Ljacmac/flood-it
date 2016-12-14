@@ -5,6 +5,7 @@
 # To change this template use Tools | Templates.
 
 def get_board(width, height)
+  done = 0
   spaces = Array.new(width, "  ")
   table = Array.new(height, spaces)
   i=0
@@ -29,7 +30,8 @@ def get_board(width, height)
     end
     puts ""
     i+=1
-  end     
+  end
+  puts "Percentage complete: #{done}%"
 end
 
 def main_menu(width, height)
